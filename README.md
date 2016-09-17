@@ -6,35 +6,33 @@ This project is intended to calculate the Halstead complexity measures which are
 ##Calculation
 First, we need to compute the following numbers, given the program source code:
 
-n1 = the number of distinct operators  
-n2 = the number of distinct operands  
-N1 = the total number of operators  
-N2 = the total number of operands  
+**n1** = the number of distinct operators  
+**n2** = the number of distinct operands  
+**N1** = the total number of operators  
+**N2** = the total number of operands  
 
-From these numbers, five measures can be calculated:  
-Program vocabulary: n = n1 + n2  
-Program length: N = N1 + N2  
-Calculated program length: N'=n1*log2(n1)+n2*log2(n2)  
-Volume: V= N*log2(n)    
-Difficulty : D=  n1/2  * (N2/n2)    
-Effort: E= D*V  
-Time required to program: T= E/18 seconds  
-Number of delivered bugs: B=V/3000  
+From these numbers, eight measures can be calculated:  
+
+**Program vocabulary:** n = n1 + n2  
+**Program length:** N = N1 + N2  
+**Calculated program length:** N'=n1*log2(n1)+n2*log2(n2)  
+**Volume:** V= N*log2(n)    
+**Difficulty:** D=  (n1/2)  * (N2/n2)    
+**Effort:** E= D*V  
+**Time required to program:** T= E/18 seconds  
+**Number of delivered bugs:** B=V/3000  
+
+
 
 ## Getting Started
-
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisities
+* JDK 8 and JRE 8 to be installed on the machine.
+* Gradle to be installed on the machine.
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
 
 ### Installing
-
 
 Clone the project to your local repository:
 ```
@@ -48,14 +46,14 @@ gradle build
 ```
 
 
-To execute the program:
+To execute the program from command line:
 ```
 gradle execute
 ```
+Then the program should ask you to enter the directory path that you wich to calculate the halstead complexity measures for. Once you provide a valid directory path, the program should return the 8 metrics of healsted complexity measures. 
 
 
-
-Example: 
+### Example
 Download the Protein Family Alignment Annotation Tool (PFAAT) from sourcefodge (https://sourceforge.net/projects/pfaat/?source=typ_redirect)
 ```
 wget https://sourceforge.net/projects/pfaat/files/OldFiles/pfaat-1_0-src.zip
