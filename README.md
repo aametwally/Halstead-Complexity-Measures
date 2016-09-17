@@ -1,13 +1,10 @@
 # Calculate Halstead Complexity Measures
 
-This project is intended to calculate the Halstead complexity metrics (https://en.wikipedia.org/wiki/Halstead_complexity_measures)
+This project is intended to calculate the Halstead complexity measures which are software metrics introduced by Maurice Howard Halstead in 1977. These metrics are computed statically, without program execution. More information can be found on the wikipedia page: (https://en.wikipedia.org/wiki/Halstead_complexity_measures)
 
-
-Halstead complexity measures are software metrics introduced by Maurice Howard Halstead in 1977. These metrics are computed statically, without program execution.
 
 ##Calculation
-
-First we need to compute the following numbers, given the program source code:
+First, we need to compute the following numbers, given the program source code:
 
 n1 = the number of distinct operators  
 n2 = the number of distinct operands  
@@ -15,15 +12,14 @@ N1 = the total number of operators
 N2 = the total number of operands  
 
 From these numbers, five measures can be calculated:  
-Program vocabulary: n = n~1~ + n^2^  
+Program vocabulary: n = n1 + n2  
 Program length: N = N1 + N2  
-Calculated program length: N'=n1log2n1+n2log2n2  
-Volume: V= N \times \log_2 n  
-Difficulty : D= { n_1 \over 2  } \times { N_2 \over n_2 }  
-Effort: E= D * V  
-
-
-
+Calculated program length: N'=n1*log2(n1)+n2*log2(n2)  
+Volume: V= N*log2(n)    
+Difficulty : D=  n1/2  * (N2/n2)    
+Effort: E= D*V  
+Time required to program: T= E/18 seconds  
+Number of delivered bugs: B=V/3000  
 
 ## Getting Started
 
