@@ -71,7 +71,7 @@ gradle test
 
 ## Authors
 
-* **Ahmed Metwally** - *Initial work*
+**Ahmed Metwally** 
 
 
 
