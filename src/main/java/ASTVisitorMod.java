@@ -52,15 +52,7 @@ public class ASTVisitorMod extends ASTVisitor{
 	CompilationUnit compilation=null;
 	
 	
-	// visit the compilation unit. This is necessary to be able to retrieve the line numbers. 
-	public boolean visit(CompilationUnit unit)
-	{
-		compilation=unit;
-		return true;
-	}
 	
-	
-
 	// visit the infix expressions
 	public boolean visit(InfixExpression node)
 	{			
@@ -86,12 +78,11 @@ public class ASTVisitorMod extends ASTVisitor{
 		else
 		{
 			this.oprt.put(node.getOperator().toString(), this.oprt.get(node.getOperator().toString())+1);
-		}
-		
-		
-		
+		}	
 		return true;
 	}
+	
+	
 	
 	public boolean visit(PrefixExpression node)
 	{		
@@ -120,7 +111,8 @@ public class ASTVisitorMod extends ASTVisitor{
 		else
 		{
 			this.oprt.put(node.getOperator().toString(), this.oprt.get(node.getOperator().toString())+1);
-		}				
+		}	
+		
 		return true;
 	}
 	
@@ -128,7 +120,6 @@ public class ASTVisitorMod extends ASTVisitor{
 	public boolean visit(SingleVariableDeclaration node) {
 		if(node.getInitializer()!=null)
 		{
-			
 			if (!this.oprt.containsKey("="))
 			{
 				this.oprt.put("=", 1);
@@ -156,7 +147,6 @@ public class ASTVisitorMod extends ASTVisitor{
 				this.oprt.put("=", this.oprt.get("=")+1);
 			}
 		}
-		
 		
 		return true;
 	}
@@ -190,8 +180,6 @@ public class ASTVisitorMod extends ASTVisitor{
 			this.names.put("null", this.names.get("null")+1);
 		}
 		
-		
-		
 		return true;
 	}
 	
@@ -215,15 +203,11 @@ public class ASTVisitorMod extends ASTVisitor{
 		if (!this.names.containsKey(Character.toString(node.charValue())))
 		{
 			this.names.put(Character.toString(node.charValue()),1);
-//			System.out.println("IN if Assignment");
-//			System.out.println(node.getIdentifier() + "\t" + this.names.get(node.getIdentifier()));
 		}
 		else
 		{
 			this.names.put(Character.toString(node.charValue()), this.names.get(Character.toString(node.charValue()))+1);
 		}
-		
-		
 		
 		return true;
 	}
@@ -244,10 +228,8 @@ public class ASTVisitorMod extends ASTVisitor{
 	}
 	
 	
-	// we count for integer only
+	
 	public boolean visit(NumberLiteral node) {	
-
-		
 		if (!this.names.containsKey(node.getToken()))
 		{
 			this.names.put(node.getToken(),1);
@@ -256,7 +238,14 @@ public class ASTVisitorMod extends ASTVisitor{
 		{
 			this.names.put(node.getToken(), this.names.get(node.getToken())+1);
 		}
+		
 		return true;
 	}	
+	
+	// Override visit the compilationUnit to be able to retrieve the line numbers. 
+		public boolean visit(CompilationUnit unit)
+		{
+			compilation=unit;
+			return true;
+		}
 }		
-

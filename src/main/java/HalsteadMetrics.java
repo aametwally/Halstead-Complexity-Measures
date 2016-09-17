@@ -3,12 +3,7 @@
  */
 
 public class HalsteadMetrics {
-	// Check if the parameters are set or not before calculating any metric
-	// make the original parameters valid for division
-	
-	public int DistOperators, DistOperands, TotOperators, TotOperands;
-	
-	
+	public int DistOperators, DistOperands, TotOperators, TotOperands;	
 	private int Vocabulary=0;
 	private int Proglen=0; 
 	private double CalcProgLen=0; 
@@ -68,7 +63,7 @@ public class HalsteadMetrics {
 		System.out.println("Difficulty= "+ Difficulty);
 	}
 	
-		
+	
 	public void getEffort()
 	{
 		Effort=((DistOperators/2)*(TotOperands/(double)DistOperands)) * ((TotOperators+TotOperands)*(Math.log(DistOperators+DistOperands)/Math.log(2)));

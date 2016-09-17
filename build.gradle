@@ -2,6 +2,7 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
 
+
 // In this section you declare where to find the dependencies of your project
 repositories {
     jcenter()
@@ -15,13 +16,15 @@ dependencies {
     
     // https://mvnrepository.com/artifact/org.eclipse.jdt/core
 	compile group: 'org.eclipse.jdt', name: 'core', version: '3.3.0-v_771'
-
+	
    
     testCompile 'junit:junit:4.12'
 }
 
 
+
 task execute(type:JavaExec) {
    classpath = sourceSets.main.runtimeClasspath
    main = 'TestParsing'
+   standardInput = System.in
 }
