@@ -9,18 +9,18 @@ Halstead complexity measures are software metrics introduced by Maurice Howard H
 
 First we need to compute the following numbers, given the program source code:
 
-n1 = the number of distinct operators
-n2 = the number of distinct operands
-N1 = the total number of operators
-N2 = the total number of operands
+n1 = the number of distinct operators  
+n2 = the number of distinct operands  
+N1 = the total number of operators  
+N2 = the total number of operands  
 
-From these numbers, five measures can be calculated:
-Program vocabulary: n = n1 + n2 \,
-Program length: N = N1 + N2  \,
-Calculated program length: N'=n1log2n1+n2log2n2
-Volume: V= N \times \log_2 n   \,
-Difficulty : D= { n_1 \over 2  } \times { N_2 \over n_2 } \,
-Effort: E= D * V \,
+From these numbers, five measures can be calculated:  
+Program vocabulary: n = n~1~ + n^2^  
+Program length: N = N1 + N2  
+Calculated program length: N'=n1log2n1+n2log2n2  
+Volume: V= N \times \log_2 n  
+Difficulty : D= { n_1 \over 2  } \times { N_2 \over n_2 }  
+Effort: E= D * V  
 
 
 
@@ -120,5 +120,4 @@ since it is a reserved keyword from source level 5.0
 
 ## Authors
 
-**Ahmed Metwally** 
-
+**Ahmed Metwally**
