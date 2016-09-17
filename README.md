@@ -1,4 +1,4 @@
-# Calculate Halstead Metrics
+# Calculate Halstead Complexity Metrics
 
 This project is intended to calculate the Halstead complexity metrics (https://en.wikipedia.org/wiki/Halstead_complexity_measures)
 
