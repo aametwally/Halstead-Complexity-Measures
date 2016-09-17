@@ -89,24 +89,18 @@ gradle test
 ### Implementation Notes:
 
 
-* I considered the 38 operators only in my implementation: "="  ">" "<" "!" "~" "?"   :   ->
-==  >=  <=  !=  &&  ||  ++  --
-+   -   *   /   &   |   ^   %   <<   >>   >>>
-+=  -=  *=  /=  &=  |=  ^=  %=  <<=  >>=  >>>=
-
-* /// Test public, non static, protected.
-* /// LambdaExpression is added in JLS8 API
-* /// catch enhanced for and if condition for the : 
-* // catch switch for the :
-* /// negative numbers counted as 
-* /// the program count import statements as Operands
-* /// Should we add the operators in different scopes as two different things
+* I considered the 37 operators only in my implementation: =,>,<,!,~,?,->,==,>=,<=,!=,&&,||,++,--,+,-,*,/,&,|,^,%,<<,>>,>>>,+=,-=,*=,/=,&=,|=,^=,%=,<<=,>>=,>>>=
+* I haven't tested for LambdaExpression as it is added in JLS8 API, and I am using JLS3
+* operator ":" captured in the switch and short version of for loop and if statements. 
+* negative numbers are counted as one operator "-" operator and a literal number operand. 
+* The program counts different parts of the import statements as operands.
+* In case of /// Should we add the operators in different scopes as two different things
 * // Count integer lateral numbers only only	
 * // Check if the parameters are set or not before calculating any metric
 * // make the original parameters valid for division
 since it is a reserved keyword from source level 5.0
 
-
+* /// Test public, non static, protected.
 
 
 
