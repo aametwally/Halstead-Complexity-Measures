@@ -40,7 +40,7 @@ git clone https://ametwally@bitbucket.org/ametwally/hw1_ahmedmetwally.git
 ```
 
 
-Navigate to the project's main directory. Then build the project using gradle 
+Navigate to the project's main directory, then build the project using gradle 
 ```
 gradle build
 ```
@@ -69,16 +69,14 @@ Execute the CalcHalsteadMetrics program by:
 build execute
 ```
 
-
-Then give the path of the unzipped PFAAT directory 
+Then provide the program with the path of the unzipped PFAAT directory 
 
 
 
 
 ## Running the tests
 
-There are couple of tests implemented in this program. to test the program using the JUnit tests:
-
+There are a couple of test cases implemented in this program. These test cases ensure that every method works as expected. You can test them using:
 ```
 gradle test
 ```
