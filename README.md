@@ -87,24 +87,11 @@ gradle test
 
 
 ### Implementation Notes:
-
-
 * I considered the 37 operators only in my implementation: =,>,<,!,~,?,->,==,>=,<=,!=,&&,||,++,--,+,-,*,/,&,|,^,%,<<,>>,>>>,+=,-=,*=,/=,&=,|=,^=,%=,<<=,>>=,>>>=
 * I haven't tested for LambdaExpression as it is added in JLS8 API, and I am using JLS3
 * operator ":" captured in the switch and short version of for loop and if statements. 
 * negative numbers are counted as one operator "-" operator and a literal number operand. 
 * The program counts different parts of the import statements as operands.
-* In case of /// Should we add the operators in different scopes as two different things
-* // Count integer lateral numbers only only	
-* // Check if the parameters are set or not before calculating any metric
-* // make the original parameters valid for division
-since it is a reserved keyword from source level 5.0
+* In case of many java files exists in the directory. The overall number of the distinct operators in the whole application is the sum of the distinct number of operators in each file. So, if we have the same operator in two files, we will have two distinct operators in the whole application. The same for the operands because of different scopes.
 
-* /// Test public, non static, protected.
-
-
-
-
-## Authors
-
-**Ahmed Metwally**
+* In my implementation, I am checking if the parsed java code to the ASTparser has any syntax error or not. Sometime, with newer versions, the code return with a syntax error. At that case, The Calculate Halstead Complexity quits with an error.
