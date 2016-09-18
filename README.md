@@ -49,10 +49,7 @@ To execute the program from command line:
 ```
 gradle execute
 ```
-Then the program should ask you to enter the directory path that you wich to calculate the halstead complexity measures for. Once you provide a valid directory path, the program should return the 8 metrics of healsted complexity measures. 
-
-
-
+Then the program should ask you to enter the directory absolute path that you wish to calculate the halstead complexity measures for. Once you provide a valid directory absolute path, the program should return the 8 metrics of healsted complexity measures. 
 
 
 
@@ -74,7 +71,7 @@ Execute the CalcHalsteadMetrics program by:
 build execute
 ```
 
-Then provide the program with the path of the unzipped PFAAT directory 
+Then provide the program with the absolute path of the unzipped PFAAT directory 
 
 
 
