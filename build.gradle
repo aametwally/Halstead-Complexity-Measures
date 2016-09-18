@@ -25,6 +25,13 @@ dependencies {
 
 task execute(type:JavaExec) {
    classpath = sourceSets.main.runtimeClasspath
-   main = 'TestParsing'
+   main = 'Main'
    standardInput = System.in
 }
+
+
+test {
+     testLogging {
+          events "started", "passed", "skipped", "failed", "standardOut", "standardError"
+     }
+ }
