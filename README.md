@@ -87,7 +87,7 @@ gradle test
 
 
 ### Implementation Notes:
-* I considered the 37 operators only in my implementation: =,>,<,!,~,?,->,==,>=,<=,!=,&&,||,++,--,+,-,*,/,&,|,^,%,<<,>>,>>>,+=,-=,*=,/=,&=,|=,^=,%=,<<=,>>=,>>>=
+* I considered the 37 operators only in my implementation: =,>,<,!,~,?,->,==,>=,<=,!=,&&,||,++,--,+,-,\*,/,&,|,^,%,<<,>>,>>>,+=,-=,*=,/=,&=,|=,^=,%=,<<=,>>=,>>>=
 * I haven't tested for LambdaExpression as it is added in JLS8 API, and I am using JLS3
 * operator ":" captured in the switch and short version of for loop and if statements. 
 * negative numbers are counted as one operator "-" operator and a literal number operand. 
