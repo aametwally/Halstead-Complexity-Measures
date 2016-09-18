@@ -1,6 +1,6 @@
 # Calculate Halstead Complexity Measures
 
-This project is intended to calculate the Halstead complexity measures which are software metrics introduced by Maurice Howard Halstead in 1977. These metrics are computed statically, without program execution. More information can be found on the wikipedia page: (https://en.wikipedia.org/wiki/Halstead_complexity_measures)
+This project is intended to calculate the Halstead complexity measures using the ASTParser. Halstead Complexity measures are software metrics introduced by Maurice Howard Halstead in 1977. These metrics are computed statically, without program execution. More information can be found on the wikipedia page: (https://en.wikipedia.org/wiki/Halstead_complexity_measures).
 
 
 ##Calculation
