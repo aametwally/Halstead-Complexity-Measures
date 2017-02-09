@@ -35,7 +35,7 @@ From these numbers, eight measures can be calculated:
 
 Clone the project to your local repository:
 ```
-git clone https://ametwally@bitbucket.org/ametwally/hw1_ahmedmetwally.git
+git clone https://github.com/aametwally/Halstead-Complexity-Measures.git
 ```
 
 
