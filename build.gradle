@@ -1,0 +1,37 @@
+// Apply the java plugin to add support for Java
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+// In this section you declare the dependencies for your production and test code
+dependencies {
+    // The production code uses the SLF4J logging API at compile time
+    compile 'org.slf4j:slf4j-api:1.7.21'
+    
+    // https://mvnrepository.com/artifact/org.eclipse.jdt/core
+	compile group: 'org.eclipse.jdt', name: 'core', version: '3.3.0-v_771'
+	
+   
+    testCompile 'junit:junit:4.12'
+}
+
+
+
+task execute(type:JavaExec) {
+   classpath = sourceSets.main.runtimeClasspath
+   main = 'Main'
+   standardInput = System.in
+}
+
+
+test {
+     testLogging {
+          events "started", "passed", "skipped", "failed", "standardOut", "standardError"
+     }
+ }
